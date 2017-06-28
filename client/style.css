@@ -1,0 +1,15 @@
+#calendarDiv{
+    width: 90%;
+    margin: auto;
+}
+
+
+.fc-sat, .fc-sun{
+    color: red;
+}
+
+.fc-today{
+    background: rgba(133, 240, 119, 0.98) !important;
+}
+
+
