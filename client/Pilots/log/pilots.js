@@ -1,3 +1,5 @@
-
-
-Template.PilotsList.helpers({ pilots: function(){return Pilots.find();} });
+Template.PilotsList.helpers({
+	pilots: function(){
+		return Pilots.find()
+		;}
+	 });
