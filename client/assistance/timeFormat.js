@@ -1,3 +1,5 @@
 Template.registerHelper('formatDate', function(date) {
-  return moment(date).format('MM.DD.YYYY');
+	moment.lang('ru');
+	
+  return moment(date).format('DD.MMMM.YYYY');
 });
