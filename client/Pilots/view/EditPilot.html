@@ -1,0 +1,13 @@
+<template name="EditPilot">
+	<h1>Редактор летного состава</h1>
+	<h3>{{name}}</h3>
+	<div>
+		{{#autoForm collection="Pilots" id="editPilot" doc=this type="update" class="new-Pilot-form" }}
+		<fieldset>
+			{{> afQuickField name='name' }}
+		</fieldset>
+		<button type="submit" class="btn btn-primary">Потвердить</button>
+		<button type="reset" id="delete" class="btn btn-danger">Удалить</button>
+		{{/autoForm}}
+	</div>
+</template>
