@@ -3,3 +3,12 @@ Template.PilotsList.helpers({
 		return Pilots.find()
 		;}
 	 });
+
+
+Template.NewPilot.events({
+  'submit form': function(e) {
+    e.preventDefault();
+     Router.go('PilotsList')
+     }
+});
+

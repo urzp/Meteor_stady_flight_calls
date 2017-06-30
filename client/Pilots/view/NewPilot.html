@@ -1,0 +1,11 @@
+<template name="NewPilot">
+<h1>Добавление летного состава</h1>
+<div>
+	{{#autoForm collection="Pilots" id="newPilot" type="insert" class="new-Pilot-form" }}
+	<fieldset>
+		{{> afQuickField name='name'}}
+	</fieldset>
+	<button type="submit" class="btn btn-primary">ОК</button>
+	{{/autoForm}}
+</div>
+</template>

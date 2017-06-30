@@ -40,3 +40,5 @@ aldeed:simple-schema
 jagi:astronomy
 handlebars
 rzymek:moment-locale-ru
+aldeed:autoform
+aldeed:collection2-core
