@@ -1,0 +1,12 @@
+<template name="NewCallsList">
+<h2>Добавление списка позывных</h2>
+<div>
+	{{#autoForm collection="Flight_calls" id="newFlight_calls" type="insert" class="new-Pilot-form" }}
+	<fieldset>
+		{{> afQuickField name='begin_valid' type='date' }}
+		{{> afQuickField name='end_valid' type='date' }}
+	</fieldset>
+	<button type="submit" class="btn btn-primary">ОК</button>
+	{{/autoForm}}
+</div>
+</template>
