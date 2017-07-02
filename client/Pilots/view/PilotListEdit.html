@@ -1,0 +1,13 @@
+<template name="PilotsListEdit">
+<h1>Test loop list</h1>
+    {{#each pilots}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td>
+        {{#autoForm id=makeUniqueID type="update" collection="Pilots" doc=this }}
+          {{> afFormGroup name="name" label=false }}
+        {{/autoForm}}
+        </td>
+      </tr>
+    {{/each}}
+</template>

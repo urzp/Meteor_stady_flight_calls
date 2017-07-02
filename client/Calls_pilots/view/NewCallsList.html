@@ -1,12 +1,29 @@
 <template name="NewCallsList">
 <h2>Добавление списка позывных</h2>
 <div>
-	{{#autoForm collection="Flight_calls" id="newFlight_calls" type="insert" class="new-Pilot-form" }}
-	<fieldset>
-		{{> afQuickField name='begin_valid' type='date' }}
-		{{> afQuickField name='end_valid' type='date' }}
-	</fieldset>
-	<button type="submit" class="btn btn-primary">ОК</button>
-	{{/autoForm}}
+	<form id="newFlight_calls" class="new-Pilot-form" novalidate="novalidate">
+		<fieldset>
+			<div class="form-group" data-required="true">
+				<label for="begin_valid" class="control-label">Начало периода действия</label>
+				<input type="date" name="begin_valid" id="begin_valid" required="" data-schema-key="begin_valid" class="form-control">
+				<label for="end_valid" class="control-label">Конец периода действия</label>
+				<input type="date" name="end_valid" id="end_valid" required="" data-schema-key="end_valid" class="form-control">
+			</div>
+			{{#each pilots}}
+			<tr>
+				<td>{{this.name}}</td>
+				<td>
+					<form  novalidate="novalidate">
+						<div class="form-group" data-required="true">
+						<input type="text" name={{this._id}} id={{this._id}} required="" data-schema-key="name" class="form-control">
+						</div>
+					</form>
+				</td>
+
+			</tr>
+			{{/each}}
+		</fieldset>
+		<button type="submit" class="btn btn-primary">ОК</button>
+	</form>
 </div>
 </template>

@@ -10,6 +10,16 @@ Template.EditPilot.helpers({
 		;},
 });
 
+Template.PilotsListEdit.helpers({
+  pilots: function(){
+    return Pilots.find()
+    ;},
+    makeUniqueID() {
+      return `update-each-${this._id}`;
+    }
+});
+
+
 Template.EditPilot.events({
 	'click #delete': function(e) {
       e.preventDefault();
