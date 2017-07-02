@@ -1,6 +1,8 @@
 <template name="CallsListPage" >
 	<h1>Позывные действуют в период</h1>
 	 <h3> с {{ formatDate begin_valid }} <span> по </span> <span></span> {{ formatDate end_valid}}</h3>
+	 <a href="{{pathFor 'EditCallsList'}}"><div class="btn btn-primary">Редактировать</div></a>
+	 <a href="{{pathFor 'EditCallsList'}}"><div class="btn btn-danger">Удалить</div></a>
 	 {{#each flight_call_list}}
       <h3>{{ name }} <span></span> {{ call }}  </h3>
     {{/each}}

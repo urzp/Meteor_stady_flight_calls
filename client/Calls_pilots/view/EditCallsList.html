@@ -1,0 +1,30 @@
+<template name="EditCallsList" >
+	<h2>Редактирование списка позывных</h2>
+	<h3> с {{ formatDate begin_valid }} <span> по </span> <span></span> {{ formatDate end_valid}}</h3>
+	<div>
+		<form  class="new-Pilot-form" novalidate="novalidate">
+			<fieldset>
+				<div class="form-group" data-required="true">
+					<label for="begin_valid" class="control-label">Начало периода действия</label>
+					<input type="date" name="begin_valid" id="begin_valid" required=""  class="form-control" value="{{begin_valid}}">
+					<label for="end_valid" class="control-label">Конец периода действия</label>
+					<input type="date" name="end_valid" id="end_valid" required=""  class="form-control" value="{{end_valid}}" >
+				</div>
+				{{#each flight_call_list}}
+				<tr>
+					<td>{{this.name}}</td>
+					<td>
+						<form  novalidate="novalidate">
+							<div class="form-group" data-required="true">
+							<input type="text" name={{id_pilot}} id={{id_pilot}} required=""  class="form-control" value="{{call}}">
+							</div>
+						</form>
+					</td>
+
+				</tr>
+				{{/each}}
+			</fieldset>
+			<button type="submit" class="btn btn-primary">ОК</button>
+		</form>
+	</div>
+</template>
