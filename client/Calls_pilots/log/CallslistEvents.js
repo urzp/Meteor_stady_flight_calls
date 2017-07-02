@@ -1,8 +1,3 @@
-Template.NewCallsList.helpers({
-  pilots: function(){
-    return Pilots.find()
-    ;}
-});
 
 Template.NewCallsList.events({
 	'submit form': function(e) {
@@ -57,3 +52,12 @@ Template.EditCallsList.events({
     }
 
 });
+
+Template.CallsListPage.events({
+  'click .delete': function(e) {
+    e.preventDefault();
+
+      Flight_calls.remove(this._id);
+      Router.go('AllCallsLists');
+  }
+})

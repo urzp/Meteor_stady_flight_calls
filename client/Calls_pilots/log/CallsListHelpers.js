@@ -15,6 +15,12 @@ Template.CallsListPage.helpers({
 	}
 });
 
+Template.NewCallsList.helpers({
+  pilots: function(){
+    return Pilots.find()
+    ;}
+});
+
 
 Template.EditCallsList.helpers({
 	pilots: function(){
