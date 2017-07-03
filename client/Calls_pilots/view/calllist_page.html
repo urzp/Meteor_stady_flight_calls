@@ -4,6 +4,9 @@
 	 <a href="{{pathFor 'EditCallsList'}}"><div class="btn btn-primary">Редактировать</div></a>
 	 <a href="{{pathFor 'EditCallsList'}}"><div class="btn btn-danger delete">Удалить</div></a>
 	 {{#each flight_call_list}}
-      <h3>{{ name }} <span></span> {{ call }}  </h3>
+		<tr>
+			<td class="name-pilot-td" ><h4>{{ name }}</h4></td>
+			<td><h4>{{ call }}</h4></td>
+		</tr>
     {{/each}}
 </template>

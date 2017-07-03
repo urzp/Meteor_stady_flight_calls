@@ -1,11 +1,85 @@
-$('#myCalendar').fullCalendar('refetchEvents');
+//$('#myCalendar').fullCalendar('refetchEvents');
+
+	var date = new Date();
+	var d = date.getDate();
+	var m = date.getMonth();
+	var y = date.getFullYear();
+
+
+var event = {
+		id: 1,
+		title: 'Период',
+		start: '2017-07-07T21:00:00',
+		allDay: true,
+		description: 'Happy Birthday',
+	}
+
+        
+ $('#calendarDiv').fullCalendar('addEventSource', [event]);
 
 
 
-var date = new Date();
-var d = date.getDate();
-var m = date.getMonth();
-var y = date.getFullYear();
+
+
+
+
+ /*
+cl_events =[];
+
+Flight_calls.find().forEach(function(item,index){
+
+	cl_events.push({
+		id: 1,
+		title: 'Период',
+		start: new Date(y, m, i),
+		allDay: true,
+		description: 'Happy Birthday',
+
+	});
+
+});
+console.log(cl_events);
+*/
+
+
+
+
+		/*id: index,
+		title: "Период действиия позывных",
+		start: Date(item.begin_valid),
+		end: Date(item.end_valid),
+		allDay: false,
+		description: 'Happy Birthday',
+		color: '#3498db' */
+
+/*
+cl_events = function(){
+
+
+	return	[{
+		id: 1,
+		title: 'Период',
+		start: '2017-07-07T21:00:00',
+		allDay: true,
+		description: 'Happy Birthday',
+	}];
+
+}
+
+cl_events = [{
+		id: 1,
+		title: 'Период',
+		start: '2017-07-07T21:00:00',
+		allDay: true,
+		description: 'Happy Birthday',
+	}];
+
+*/
+		
+
+	
+
+/*
 
 cl_events = [
 {
@@ -41,4 +115,6 @@ start: new Date(y, m, 5, 18),
 allDay: false,
 color: '#e67e22'
 }] 
-        
+*/
+
+

@@ -1,3 +1,5 @@
+
+
 Template.calendar.onRendered(() => {    
     $('#calendarDiv').fullCalendar({
         lang:"ru",
@@ -10,7 +12,7 @@ Template.calendar.onRendered(() => {
             center: 'title',
             right: 'prevYear, prev, today, next, nextYear'
         },
-        editable: true,
-        events: cl_events
+        editable: true
+        //events: cl_events
     });  
 });
