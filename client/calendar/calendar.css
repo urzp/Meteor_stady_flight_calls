@@ -9,5 +9,23 @@
 }
 
 .fc-today{
-    background: rgba(133, 240, 119, 0.98) !important;
+    background: rgba(133, 240, 119, 0.30) !important;
+}
+
+
+.fc-title{
+	color: #484ec7;
+	font-style: italic;
+	
+}
+
+.fc-content{
+	text-align: center;
+	height: 15px !important;
+	margin: 10px 0;
+	box-sizing: border-box;
+}
+
+.fc-time{
+	display: none;
 }

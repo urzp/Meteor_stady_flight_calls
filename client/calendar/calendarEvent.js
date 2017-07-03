@@ -1,29 +1,63 @@
-//$('#myCalendar').fullCalendar('refetchEvents');
-
-	var date = new Date();
-	var d = date.getDate();
-	var m = date.getMonth();
-	var y = date.getFullYear();
-
-
-var event = {
-		id: 1,
-		title: 'Период',
-		start: '2017-07-07T21:00:00',
-		allDay: true,
-		description: 'Happy Birthday',
-	}
-
-        
- $('#calendarDiv').fullCalendar('addEventSource', [event]);
-
-
-
-
-
-
-
  /*
+$('#calendarDiv').fullCalendar({});
+
+
+
+    cl_events =[];
+
+    Flight_calls.find().forEach(function(item){
+
+        cl_events.push({
+			title: "Период действиия позывных",
+			start: item.begin_valid,
+			end: item.end_valid,
+			allDay: false,
+			description: 'Happy Birthday',
+			color: '#3498db' 
+        });
+        
+    });
+
+    
+    console.log(cl_events);
+
+     $('#calendarDiv').fullCalendar('addEventSource', cl_events);
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+
+			var date = new Date();
+			var d = date.getDate();
+			var m = date.getMonth();
+			var y = date.getFullYear();
+	
+		cal_event = {
+			id: 1,
+			title: 'Период',
+			start: '2017-07-07T21:00:00',
+			allDay: true,
+			description: 'Happy Birthday',
+		}
+		console.log(cal_event)
+		 $('#calendarDiv').fullCalendar('addEventSource', [cal_event]);
+
+	
+})      
+
+
+
+
+
+
+
+
+
 cl_events =[];
 
 Flight_calls.find().forEach(function(item,index){

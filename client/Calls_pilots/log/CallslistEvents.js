@@ -16,6 +16,7 @@ Template.NewCallsList.events({
     		begin_valid: $(e.target).find('[name=begin_valid]').val(),
     		end_valid: $(e.target).find('[name=end_valid]').val(),
     		date_create:  new Date(),
+            date_update:  new Date(),
     		flight_call_list: callslist_form 
     	}
 
@@ -43,6 +44,7 @@ Template.EditCallsList.events({
         var callsProperties = { 
             begin_valid: $(e.target).find('[name=begin_valid]').val(),
             end_valid: $(e.target).find('[name=end_valid]').val(),
+            date_update:  new Date(),
             flight_call_list: callslist_form 
         }
 
