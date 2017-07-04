@@ -32,6 +32,7 @@ Template.calendar.onRendered(() => {
             url: '/callsListpage/'+ item._id,
             color: 'rgba(38, 235, 218, 0.3)',
             TextColor: 'rgb(55, 57, 89)'
+
         });
         
     });

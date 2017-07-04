@@ -1,10 +1,13 @@
 <template name="layout">
   <div class="container">
     <header class="navbar navbar-default" role="navigation"> 
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">NAVBAR</a>
-        <a href="{{pathFor 'NewPilot'}}" class="discuss btn btn-default">Добавить летный состав</a>
-      </div>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <a href="{{pathFor 'home'}}" class="discuss btn btn-default">Главная</a>
+          <a href="{{pathFor 'PilotsList'}}" class="discuss btn btn-default">Летный состав</a>
+          <a href="{{pathFor 'AllCallsLists'}}" class="discuss btn btn-default">Списки позывных</a>
+        </div>
+      </nav>
     </header>
     <div id="main" class="row-fluid">
       {{> yield}}
